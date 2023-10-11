@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.leaflet-div-icon {
+  background-color: red;
+}
+
+.custom-animation {
+  animation-name: custom-bounceInUp;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@keyframes custom-bounceInUp {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 150px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.select {
+  position: relative;
+  width: 80px;
+  
+}
+.select select {
+  
+  cursor: pointer;
+  padding: 8px 8px;
+  border: 0px solid #000000;
+  border-radius: 6px;
+  background: #e6e6e6;
+  color: #0095E8;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+}
+
+.select {
+  background-color: #cccccc;
+  padding: 8px ;
+  border-radius: 5px;
+}
+.select:hover{
+  color: #4c4e53;
+  background: #97cfed;
+}
+
+.select_arrow {
+  position: absolute;
+  top: 13px;
+  right: 6px;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0px 5px;
+  border-color: #4c4e53 transparent transparent transparent;
+}
+.select:hover ~ .select_arrow{
+  border-top-color: #000000;
+}
+
+.leaflet-container {
+  height: 600px;
+  width: 600px;
+}
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: red;
+  border:"1px solid red";
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.static-map {
+  width: 250px;
+  height: 250px;
+}
+
+
